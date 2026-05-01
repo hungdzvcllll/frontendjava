@@ -6,7 +6,7 @@
 
 const CONFIG = {
     // API Base URL - thay đổi khi deploy
-    API_BASE_URL: 'https://javabe-production-6f48.up.railway.app',
+    API_BASE_URL: 'https://javaactions-production.up.railway.app',
     
     // API Endpoints
     API: {
@@ -18,6 +18,7 @@ const CONFIG = {
         CONFIRM_RESET: '/user/confirmResetPassword',
         UPDATE_PROFILE: '/user/update',
         YOUR_PROFILE: '/user/yourProfile',
+        GOOGLE_LOGIN:'/user/signinwithgoogle',
         
         // Folder
         FOLDER_SAVE_PERSONAL: '/folder/savePersonalFolder',
