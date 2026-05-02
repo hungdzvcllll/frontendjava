@@ -33,7 +33,9 @@ const API = {
     isLoggedIn() {
         const params = new URLSearchParams(window.location.search);
         const tokenFromUrl = params.get('token');
+        if (tokenFromUrl) {
         this.setToken(tokenFromUrl);
+        }
         return !!this.getToken();
     },
 
