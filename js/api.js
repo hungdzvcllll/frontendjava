@@ -31,14 +31,10 @@ const API = {
      * Check if user is logged in
      */
     isLoggedIn() {
-    const params = new URLSearchParams(window.location.search);
-    const tokenFromUrl = params.get('token');
-
-    if (tokenFromUrl) {
-        localStorage.setItem('token', tokenFromUrl);
-    }
-
-    return !!localStorage.getItem('token');
+        const params = new URLSearchParams(window.location.search);
+        const tokenFromUrl = params.get('token');
+        this.setToken(tokenFromUrl);
+        return !!this.getToken();
     },
 
     /**
