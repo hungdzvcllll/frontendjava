@@ -188,17 +188,16 @@
                 registerBtn.querySelector('.btn-text').classList.add('d-none');
                 registerBtn.querySelector('.spinner-border').classList.remove('d-none');
                 
-                try {
-                    await API.register(username, password, email);
-                    Utils.success('Đăng ký thành công! Vui lòng kiểm tra email để lấy mã xác nhận.');
-                    
-                    // Show confirm form
-                    registeredUsername = username;
-                    document.getElementById('confirm-email').textContent = email;
-                    registerForm.classList.add('d-none');
-                    document.getElementById('confirm-form').classList.remove('d-none');
-                    
-                } catch (error) {
+                 try {
+    await API.register(username, password, email);
+
+    Utils.success('Đăng ký thành công! Đang chuyển đến trang đăng nhập...');
+
+    setTimeout(() => {
+        window.location.href = 'login.html';
+    }, 1500);
+
+   }  catch (error) {
                     Utils.error(error.message || 'Đăng ký thất bại. Vui lòng thử lại.');
                 } finally {
                     registerBtn.disabled = false;
