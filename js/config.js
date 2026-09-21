@@ -6,7 +6,7 @@
 
 const CONFIG = {
     // API Base URL - thay đổi khi deploy
-    API_BASE_URL: '"https://javaactions-production-4ef7.up.railway.app',
+    API_BASE_URL: 'https://javaactions-production-4ef7.up.railway.app',
     
     // API Endpoints
     API: {
